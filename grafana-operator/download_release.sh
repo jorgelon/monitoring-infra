@@ -12,6 +12,7 @@ mkdir -p ${release}
 curl -fSsL https://github.com/grafana/grafana-operator/releases/download/${release}/kustomize-namespace_scoped.yaml -o ${release}/kustomize-namespace_scoped.yaml
 
 cat <<EOF >>${release}/kustomization.yaml
+namespace: monitoring 
 resources:
 - kustomize-namespace_scoped.yaml
 EOF

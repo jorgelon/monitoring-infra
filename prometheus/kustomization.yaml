@@ -1,0 +1,10 @@
+resources:
+  - cr-prometheus.yaml
+  - crb-prometheus.yaml
+  - prom-instance.yaml
+  - sa-prometheus.yaml
+  - secret-prometheus-sa-token.yaml
+labels:
+  - pairs:
+      app.kubernetes.io/name: prometheus
+      app.kubernetes.io/component: prometheus

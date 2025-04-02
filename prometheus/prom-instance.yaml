@@ -1,0 +1,23 @@
+apiVersion: monitoring.coreos.com/v1
+kind: Prometheus
+metadata:
+  name: k8s-metrics
+spec:
+  serviceAccountName: prometheus
+  retention: 7d
+  serviceMonitorNamespaceSelector: {}
+  serviceMonitorSelector:
+    matchLabels:
+      prometheus/instance: k8s-metrics
+  podMonitorNamespaceSelector: {}
+  podMonitorSelector:
+    matchLabels:
+      prometheus/instance: k8s-metrics
+  ruleNamespaceSelector: {}
+  ruleSelector:
+    matchLabels:
+      prometheus/instance: k8s-metrics
+  probeNamespaceSelector: {}
+  probeSelector:
+    matchLabels:
+      prometheus/instance: k8s-metrics
