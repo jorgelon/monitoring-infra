@@ -5,3 +5,9 @@ resources:
   - ../../prometheus-operator/v0.81.0/
   - ../../prometheus/v0.0.1
   - ../../control-plane/
+labels:
+  - pairs:
+      app.kubernetes.io/part-of: monitoring-infra
+      app.kubernetes.io/managed-by: kustomize
+      app.kubernetes.io/instance: k8s-monitoring
+      app.kubernetes.io/version: v0.0.1

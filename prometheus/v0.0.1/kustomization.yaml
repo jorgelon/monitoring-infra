@@ -4,3 +4,7 @@ resources:
   - prom-instance.yaml
   - k8s-sa-prometheus.yaml
   - k8s-secret-prometheus-sa-token.yaml
+labels:
+  - pairs:
+      app.kubernetes.io/name: prometheus
+      app.kubernetes.io/component: metrics-storage
