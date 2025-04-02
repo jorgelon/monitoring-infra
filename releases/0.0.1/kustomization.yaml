@@ -11,3 +11,9 @@ labels:
       app.kubernetes.io/managed-by: kustomize
       app.kubernetes.io/instance: k8s-monitoring
       app.kubernetes.io/version: v0.0.1
+patches:
+  - path: overlays/adapter.yaml
+    target:
+      kind: Deployment
+      name: prometheus-adapter
+      namespace: monitoring
