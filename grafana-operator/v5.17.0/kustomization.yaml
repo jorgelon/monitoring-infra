@@ -1,0 +1,2 @@
+resources:
+- kustomize-namespace_scoped.yaml
