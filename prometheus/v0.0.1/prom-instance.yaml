@@ -4,13 +4,13 @@ metadata:
   name: k8s-monitoring
 spec:
   serviceAccountName: prometheus
-  serviceMonitorNamespaceSelector: {}
+  # serviceMonitorNamespaceSelector: {}
   serviceMonitorSelector: {}
+  # podMonitorNamespaceSelector: {}
   podMonitorSelector: {}
-  podMonitorNamespaceSelector: {}
-  ruleNamespaceSelector: {}
+  # ruleNamespaceSelector: {}
   ruleSelector: {}
-  probeNamespaceSelector: {}
+  # probeNamespaceSelector: {}
   probeSelector: {}
   resources:
     requests:
