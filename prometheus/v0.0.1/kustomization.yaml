@@ -1,6 +1,7 @@
 resources:
   - k8s-cr-prometheus.yaml
   - k8s-crb-prometheus.yaml
+  - k8s-svc-prometheus.yaml # this permits default prometheus adapter settings to talk with our prometheus
   - prom-instance.yaml
   - k8s-sa-prometheus.yaml
   - k8s-secret-prometheus-sa-token.yaml
