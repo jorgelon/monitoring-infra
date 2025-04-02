@@ -4,14 +4,18 @@ metadata:
   name: k8s-monitoring
 spec:
   serviceAccountName: prometheus
-  # serviceMonitorNamespaceSelector: {}
-  serviceMonitorSelector: {}
-  # podMonitorNamespaceSelector: {}
-  podMonitorSelector: {}
-  # ruleNamespaceSelector: {}
-  ruleSelector: {}
-  # probeNamespaceSelector: {}
-  probeSelector: {}
+  serviceMonitorSelector:
+    matchLabels:
+      app.kubernetes.io/part-of: monitoring-infra
+  podMonitorSelector:
+    matchLabels:
+      app.kubernetes.io/part-of: monitoring-infra
+  ruleSelector:
+    matchLabels:
+      app.kubernetes.io/part-of: monitoring-infra
+  probeSelector:
+    matchLabels:
+      app.kubernetes.io/part-of: monitoring-infra
   resources:
     requests:
       memory: 2Gi
