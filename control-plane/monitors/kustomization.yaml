@@ -1,0 +1,2 @@
+resources:
+  - prom-sm-kubelet.yaml

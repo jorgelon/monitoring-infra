@@ -4,3 +4,4 @@ resources:
   - ../../prometheus-adapter/v0.12.0/
   - ../../prometheus-operator/v0.81.0/
   - ../../prometheus/v0.0.1
+  - ../../control-plane/
