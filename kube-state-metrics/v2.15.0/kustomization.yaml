@@ -11,9 +11,6 @@ images:
     newTag: v2.15.0
 labels:
   - pairs:
-      - key: app.kubernetes.io/name
-        value: kube-state-metrics
-      - key: app.kubernetes.io/version
-        value: v2.15.0
-      - key: app.kubernetes.io/component
-        value: metrics
+      app.kubernetes.io/name: kube-state-metrics
+      app.kubernetes.io/version: v2.15.0
+      app.kubernetes.io/component: metrics
