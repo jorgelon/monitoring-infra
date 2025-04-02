@@ -9,3 +9,10 @@ Based on:
 - grafana-operator
 - official prometheus-adapter manifests
 - hand made kube-state-metrics manifests
+
+It will deploy almost inside the monitoring namespace
+
+Inspired but not clearly compatible with:
+
+- kube-prometheus
+- kube-promtheus-stack
