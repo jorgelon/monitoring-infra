@@ -9,3 +9,11 @@ images:
   - name: myregistry/myproject/myimage
     newName: registry.k8s.io/kube-state-metrics/kube-state-metrics
     newTag: v2.15.0
+labels:
+  - pairs:
+      - key: app.kubernetes.io/name
+        value: kube-state-metrics
+      - key: app.kubernetes.io/version
+        value: v2.15.0
+      - key: app.kubernetes.io/component
+        value: metrics
