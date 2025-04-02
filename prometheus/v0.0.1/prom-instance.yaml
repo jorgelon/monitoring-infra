@@ -1,0 +1,14 @@
+apiVersion: monitoring.coreos.com/v1
+kind: Prometheus
+metadata:
+  name: k8s-metrics
+spec:
+  serviceAccountName: prometheus
+  serviceMonitorNamespaceSelector: {}
+  podMonitorNamespaceSelector: {}
+  ruleNamespaceSelector: {}
+  probeNamespaceSelector: {}
+  resources:
+    requests:
+      memory: 2Gi
+      cpu: 200m

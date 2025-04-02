@@ -1,0 +1,6 @@
+resources:
+  - k8s-cr-prometheus.yaml
+  - k8s-crb-prometheus.yaml
+  - prom-instance.yaml
+  - k8s-sa-prometheus.yaml
+  - k8s-secret-prometheus-sa-token.yaml

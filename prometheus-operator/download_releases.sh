@@ -13,6 +13,7 @@ echo "Creating ${release} manifests"
 curl -fSsL https://github.com/prometheus-operator/prometheus-operator/releases/download/${release}/bundle.yaml -o ${release}/bundle.yaml
 
 cat <<EOF >${release}/kustomization.yaml
+namespace: monitoring 
 resources:
   - bundle.yaml
 EOF
