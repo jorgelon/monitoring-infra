@@ -20,3 +20,7 @@ spec:
     requests:
       memory: 2Gi
       cpu: 200m
+  securityContext:
+    fsGroup: 2000
+    runAsNonRoot: true
+    runAsUser: 1000
