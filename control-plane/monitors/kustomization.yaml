@@ -1,2 +1,3 @@
 resources:
   - prom-sm-kubelet.yaml
+  - prom-sm-kube-api-server.yaml
