@@ -9,6 +9,8 @@ spec:
   podMetricsEndpoints:
     - path: /metrics
       portNumber: 10257
+      tlsConfig:
+        insecureSkipVerify: true
   selector:
     matchLabels:
       component: kube-controller-manager
