@@ -17,8 +17,6 @@ resources:
 - kustomize-namespace_scoped.yaml
 labels:
   - pairs:
-      - name: app.kubernetes.io/component
-        value: operator
-      - name: app.kubernetes.io/name
-        value: grafana-operator
+      app.kubernetes.io/component: operator
+      app.kubernetes.io/name: grafana-operator
 EOF
