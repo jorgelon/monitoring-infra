@@ -1,0 +1,9 @@
+namespace: appsmon
+resources:
+  - k8s-deploy-karma.yaml
+  - k8s-svc-karma.yaml
+labels:
+  - pairs:
+      app.kubernetes.io/name: karma
+      app.kubernetes.io/version: v0.121
+      app.kubernetes.io/component: alerts-ui
