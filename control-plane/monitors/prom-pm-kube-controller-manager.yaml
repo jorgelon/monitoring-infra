@@ -11,6 +11,11 @@ spec:
       portNumber: 10257
       tlsConfig:
         insecureSkipVerify: true
+      authorization: # use the Bearer token for authorization
+        type: Bearer
+        credentials:
+          key: token
+          name: prometheus-sa-token
   selector:
     matchLabels:
       component: kube-controller-manager
