@@ -16,10 +16,6 @@ spec:
   probeSelector:
     matchLabels:
       app.kubernetes.io/part-of: monitoring-infra
-  resources:
-    requests:
-      memory: 2Gi
-      cpu: 200m
   securityContext:
     fsGroup: 2000
     runAsNonRoot: true
