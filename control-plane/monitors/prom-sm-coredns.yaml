@@ -11,10 +11,6 @@ spec:
         credentials:
           key: token
           name: prometheus-sa-token
-      scheme: https # use https
-      tlsConfig: # skip the verification of the certificate
-        insecureSkipVerify: true
-        caFile: /var/run/secrets/kubernetes.io/serviceaccount/ca.crt
   namespaceSelector:
     matchNames:
       - kube-system
