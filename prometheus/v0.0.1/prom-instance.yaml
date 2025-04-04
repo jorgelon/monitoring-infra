@@ -20,4 +20,3 @@ spec:
     requests:
       memory: 2Gi
       cpu: 200m
-  logLevel: debug
