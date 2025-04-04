@@ -16,3 +16,18 @@ Inspired but not clearly compatible with:
 
 - kube-prometheus
 - kube-promtheus-stack
+
+## Argocd waves
+
+- Wave -5:
+
+prometheus-operator
+grafana-operator
+
+- Wave -3:
+
+prometheus
+
+- Wave 0 (default)
+  
+Other stuff

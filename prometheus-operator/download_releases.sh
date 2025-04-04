@@ -16,4 +16,6 @@ cat <<EOF >${release}/kustomization.yaml
 namespace: monitoring 
 resources:
   - bundle.yaml
+commonAnnotations:
+  argocd.argoproj.io/sync-wave: "-5"
 EOF

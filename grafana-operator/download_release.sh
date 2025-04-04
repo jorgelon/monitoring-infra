@@ -19,4 +19,6 @@ labels:
   - pairs:
       app.kubernetes.io/component: operator
       app.kubernetes.io/name: grafana-operator
+commonAnnotations:
+  argocd.argoproj.io/sync-wave: "-5"
 EOF
