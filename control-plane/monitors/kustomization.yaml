@@ -1,3 +1,4 @@
 resources:
-  - prom-sm-kubelet.yaml
+  - prom-pm-kube-controller-manager.yaml
   - prom-sm-kube-api-server.yaml
+  - prom-sm-kubelet.yaml
