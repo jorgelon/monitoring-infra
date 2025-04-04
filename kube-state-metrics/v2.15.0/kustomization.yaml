@@ -12,5 +12,4 @@ images:
 labels:
   - pairs:
       app.kubernetes.io/name: kube-state-metrics
-      app.kubernetes.io/version: v2.15.0
       app.kubernetes.io/component: metrics

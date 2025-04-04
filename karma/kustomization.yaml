@@ -4,5 +4,4 @@ resources:
 labels:
   - pairs:
       app.kubernetes.io/name: karma
-      app.kubernetes.io/version: v0.121
       app.kubernetes.io/component: alerts-ui

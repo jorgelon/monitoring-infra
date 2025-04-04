@@ -1,3 +1,7 @@
+labels:
+  - pairs:
+      app.kubernetes.io/name: prometheus-adapter
+      app.kubernetes.io/component: apiservice
 resources:
 - api-service.yaml
 - cluster-role-aggregated-metrics-reader.yaml

@@ -1,8 +1,8 @@
 resources:
   - ../../grafana-operator/v5.17.0/
   - ../../kube-state-metrics/v2.15.0
-  - ../../prometheus-adapter/v0.12.0/
-  - ../../prometheus-operator/v0.81.0/
+  - ../../prometheus-adapter/v0.12.0
+  - ../../prometheus-operator/v0.81.0
   - ../../prometheus/v0.0.1
   - ../../control-plane/
   - ../../karma/

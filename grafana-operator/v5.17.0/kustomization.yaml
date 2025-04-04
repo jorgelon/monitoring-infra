@@ -1,3 +1,9 @@
-namespace: monitoring # force monitoring
+namespace: monitoring 
 resources:
-  - kustomize-namespace_scoped.yaml
+- kustomize-namespace_scoped.yaml
+labels:
+  - pairs:
+      - name: app.kubernetes.io/component
+        value: operator
+      - name: app.kubernetes.io/name
+        value: grafana-operator

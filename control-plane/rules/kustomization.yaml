@@ -9,5 +9,4 @@ resources:
   - prom-rule-workloads.yaml
 labels:
   - pairs:
-      app.kubernetes.io/name: k8s-rules
       app.kubernetes.io/component: rules

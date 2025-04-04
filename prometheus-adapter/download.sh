@@ -18,6 +18,10 @@ rm -rf ${release}-tmp
 
 echo "Creating kustomization file from the yaml files inside the $release directory"
 cat <<EOF >${release}/kustomization.yaml
+labels:
+  - pairs:
+      app.kubernetes.io/name: prometheus-adapter
+      app.kubernetes.io/component: apiservice
 resources:
 EOF
 
