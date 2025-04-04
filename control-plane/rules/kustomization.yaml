@@ -1,0 +1,13 @@
+resources:
+  - prom-rule-control-plane.yaml
+  - prom-rule-coredns.yaml
+  - prom-rule-jobs.yaml
+  - prom-rule-nodes.yaml
+  - prom-rule-scaling.yaml
+  - prom-rule-statefulset.yaml
+  - prom-rule-storage.yaml
+  - prom-rule-workloads.yaml
+labels:
+  - pairs:
+      app.kubernetes.io/name: k8s-rules
+      app.kubernetes.io/component: rules

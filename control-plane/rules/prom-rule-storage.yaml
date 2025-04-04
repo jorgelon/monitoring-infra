@@ -1,0 +1,40 @@
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: storage
+spec:
+  groups:
+    - name: storage
+      rules:
+        - alert: KubernetesPersistentvolumeclaimPending
+          expr: kube_persistentvolumeclaim_status_phase{phase="Pending"} == 1
+          for: 2m
+          labels:
+            severity: warning
+          annotations:
+            summary: Kubernetes PersistentVolumeClaim pending (instance {{ $labels.instance }})
+            description: "PersistentVolumeClaim {{ $labels.namespace }}/{{ $labels.persistentvolumeclaim }} is pending\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"
+        - alert: KubernetesVolumeOutOfDiskSpace
+          expr: kubelet_volume_stats_available_bytes / kubelet_volume_stats_capacity_bytes * 100 < 10
+          for: 2m
+          labels:
+            severity: warning
+          annotations:
+            summary: Kubernetes Volume out of disk space (instance {{ $labels.instance }})
+            description: "Volume is almost full (< 10% left)\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"
+        - alert: KubernetesVolumeFullInFourDays
+          expr: predict_linear(kubelet_volume_stats_available_bytes[6h:5m], 4 * 24 * 3600) < 0
+          for: 0m
+          labels:
+            severity: critical
+          annotations:
+            summary: Kubernetes Volume full in four days (instance {{ $labels.instance }})
+            description: "Volume under {{ $labels.namespace }}/{{ $labels.persistentvolumeclaim }} is expected to fill up within four days. Currently {{ $value | humanize }}% is available.\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"
+        - alert: KubernetesPersistentvolumeError
+          expr: kube_persistentvolume_status_phase{phase=~"Failed|Pending", job="kube-state-metrics"} > 0
+          for: 0m
+          labels:
+            severity: critical
+          annotations:
+            summary: Kubernetes PersistentVolume error (instance {{ $labels.instance }})
+            description: "Persistent volume {{ $labels.persistentvolume }} is in bad state\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"
