@@ -1,5 +1,5 @@
 resources:
-  # - prom-pm-kube-controller-manager.yaml # --bind-address=127.0.0.1
+  - prom-pm-kube-controller-manager.yaml # --bind-address=127.0.0.1
   - prom-sm-kube-api-server.yaml
   - prom-sm-kubelet.yaml
   - prom-pm-kube-proxy.yaml
