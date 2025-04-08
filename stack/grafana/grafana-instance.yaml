@@ -25,3 +25,7 @@ spec:
             fsGroup: 472
             supplementalGroups:
               - 0
+          volumes:
+            - name: grafana
+              persistentVolumeClaim:
+                claimName: grafana
