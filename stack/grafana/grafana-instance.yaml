@@ -1,7 +1,7 @@
 apiVersion: grafana.integreatly.org/v1beta1
 kind: Grafana
 metadata:
-  name: grafana-live
+  name: k8s
 spec:
   config:
     auth:
@@ -20,7 +20,7 @@ spec:
               name: grafana
               volumeMounts:
                 - mountPath: /var/lib/grafana
-                  name: grafana-pvc
+                  name: grafana
           securityContext:
             fsGroup: 472
             supplementalGroups:
