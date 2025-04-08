@@ -1,7 +1,7 @@
 apiVersion: monitoring.coreos.com/v1
 kind: Prometheus
 metadata:
-  name: k8s
+  name: k8s-prometheus
 spec:
   serviceAccountName: prometheus
   serviceMonitorSelector:

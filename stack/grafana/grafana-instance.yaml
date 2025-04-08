@@ -1,7 +1,7 @@
 apiVersion: grafana.integreatly.org/v1beta1
 kind: Grafana
 metadata:
-  name: k8s
+  name: k8s-grafana
 spec:
   config:
     auth:
