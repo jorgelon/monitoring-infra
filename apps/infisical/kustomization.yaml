@@ -1,0 +1,5 @@
+resources:
+  - metrics
+labels:
+  - pairs:
+      app.kubernetes.io/name: infisical

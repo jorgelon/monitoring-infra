@@ -1,0 +1,9 @@
+resources:
+  - prom-am-instance.yaml
+  - k8s-sa-alertmanager.yaml
+labels:
+  - pairs:
+      app.kubernetes.io/name: alertmanager
+      app.kubernetes.io/component: alerting
+commonAnnotations:
+  argocd.argoproj.io/sync-wave: "-1"

@@ -1,6 +1,0 @@
-resources:
-  - monitors
-  - rules
-labels:
-  - pairs:
-      app.kubernetes.io/component: control-plane
